@@ -1,109 +1,78 @@
 <div class="footer">
-    <div class="footer_content">
-
-        <div class="footer_top">
-            <div class="footer_menu">
-                <div class="nav_footer">
-                    <ul>
-                        <?php echo $listfooter ?>
-                    </ul>
-                    <div class="line"></div>
-                </div>
-
+        <div class="menu-footer">
+            <div class="containerS">
+                <ul>
+                    <li class="active"><a href="javascript:;" data-value="http://vip.zon.club/">Trang chủ</a></li>
+                    <li><a href="javascript:;" data-value="http://vip.zon.club/profile.html" data-requiredlogin="1">Hồ sơ VIP</a></li>
+                    <li><a href="javascript:;" data-value="http://vip.zon.club/level-vip.html">Cấp độ VIP</a></li>
+                    <li><a href="javascript:;" data-value="http://vip.zon.club/benefit-1.html">Đặc quyền VIP</a></li>
+                    <li><a href="javascript:;" data-value="http://vip.zon.club/champion.html">Vinh danh</a></li>
+                    <li><a href="javascript:;" data-value="javascript:;" onclick="window.open(jsConfig.urlTinTuc, 'news')">Tin tức</a></li>
+                    <li><a href="javascript:;" data-value="http://vip.zon.club/faqs.html">Hỏi đáp</a></li>
+                    <li><a href="javascript:;" data-value="javascript:;" onclick="window.open(jsConfig.urlRootPortal, 'portal')">Chơi game</a></li>
+                </ul>
             </div>
         </div>
-        <div class="footer_menu_bot">
-            <div class="footer_pay">
-                <div class="div_pay">
-                    <div class="div_pay_left">
-                        <div class="title_pay">Các phương thức thanh toán</div>
-                        <div class="div_pay_images">
-                            <img src="<?php echo public_url("site/images/payment.png") ?>">
-                        </div>
-                    </div>
-                    <div class="div_pay_right">
-                        <div class="title_pay">Kết nối với chúng tôi</div>
-                        <div class="div_pay_images">
-                            <ul>
-                                <li><a target="_blank" href="<?php echo $linkface ?>"> <img
-                                            src="<?php echo public_url("site/images/facebook.png") ?>"></a></li>
-                                <li><a target="_blank" href="<?php echo $linkgoogle ?>"> <img
-                                            src="<?php echo public_url("site/images/googleplus.png") ?>"></a></li>
-                                <li><a target="_blank" href="<?php echo $linktwiter ?>"> <img
-                                            src="<?php echo public_url("site/images/twitter.png") ?>"></a></li>
-                                <li><a target="_blank" href="<?php echo $linkyoutube ?>"> <img
-                                            src="<?php echo public_url("site/images/youtube.png") ?>"></a></li>
-                                <li><a target="_blank" href="<?php echo $linkblog ?>"> <img
-                                            src="<?php echo public_url("site/images/blog.png") ?>"></a></li>
-											<li><a target="_blank" href="http://vuabaidoithuong.blogspot.com/"> <img
-                                            src="<?php echo public_url("site/images/blog_1.png") ?>"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        <div class="containerS">
+            <div class="left-menu-footer">
+                <p><a href="javascript:;" onclick="window.open(jsConfig.urlDieuKhoan, 'portal')">Điều khoản</a> | <a href="javascript:;" onclick="window.open(jsConfig.urlHoTro, 'portal')">Hỗ trợ</a> | <a href="javascript:;" onclick="window.open(jsConfig.urlFanpage, 'fanpage')">Fanpage</a></p>
+                <p>Tổng đài: <a href="tel:+8419006799">1900 6799</a> - Email: <a href="hotro@zon.club">hotro@zon.club</a> </p>
             </div>
-        </div>
-        <div class="contact">
-            <div class="content_polices">
-            <?php echo $contact ?>
+            <div class="right-menu-footer">
+                <p>©2017 Bản quyền thuộc <a href="javascript:;" onclick="window.open(jsConfig.urlRootPortal, 'portal')">Zon.club</a></p>
+                <p>Game dành cho 13+</p>
             </div>
         </div>
     </div>
+    <script src="<?php echo public_url('site') ?>/js/jsConfig.js"></script>
+     <script src="<?php echo public_url('site') ?>/js/vip.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            libMenu.Init();
+            libAccount.GetAccountInfor();
+            //Set active menu
 
-</div>
-<?php echo $codeGA ?>
-<h1 style="display: none"><?php echo $h1 ?></h1>
-<style type='text/css'>
-body{
--webkit-touch-callout: none;
--webkit-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
--o-user-select: none;
-user-select: none;
-}
-</style>
-<script type='text/javascript'>
-//<![CDATA[
-// JavaScript Document
-var message="NoRightClicking"; function defeatIE() {if (document.all) {(message);return false;}} function defeatNS(e) {if (document.layers||(document.getElementById&&!document.all)) { if (e.which==2||e.which==3) {(message);return false;}}} if (document.layers) {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=defeatNS;} else{document.onmouseup=defeatNS;document.oncontextmenu=defeatIE;} document.oncontextmenu=new Function("return false")
-//]]>
-</script>
+            //Menu footer
+            $("#navbar .navbar-nav li,.footer .containerS li").removeClass("active");
+            $.each($("#navbar .navbar-nav a,.footer .containerS li a"), function (i, item) {
+                if (location.href.toLocaleLowerCase() == $(this).data("value").toLocaleLowerCase()) {
+                    $(this).parent().addClass("active");
+                }
+            });
+            //End Set active menu
 
-<!-- Facebook Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
+            $('#fullpage').fullpage({
+                verticalCentered: true,
+                autoScrolling: false,
+                fitToSection: false,
+                afterLoad: function (anchorLink, index) {
+                    if (index == 3) {
+                        $('.count').each(function () {
+                            $(this).prop('Counter', 0).animate({
+                                Counter: $(this).text()
+                            }, {
+                                duration: 2000,
+                                easing: 'swing',
+                                step: function (now) {
+                                    $(this).text(Math.ceil(now));
+                                }
+                            });
+                        });
+                    }
+                },
+                afterRender: function () {
+                    console.log('afterRender')
+                },
+            });
+         
+            $('.active-lang').click(function () {
+                $('.list-langbox').toggleClass('active');
 
-fbq('init', '483878731961520');
-fbq('track', "PageView");</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=483878731961520&ev=PageView&noscript=1"
-/></noscript>
-<script>
-<!-- End Facebook Pixel Code -->
-// Purchase
-// Track purchases or checkout flow completions (ex. landing on "Thank You" or confirmation page)
-fbq('track', 'Purchase', {value: '1.00', currency: 'USD'});
-// CompleteRegistration
-// Track when a registration form is completed (ex. complete subscription, sign up for a service)
-fbq('track', 'CompleteRegistration');
-</script>
-
-<script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id = 870957946;
-var google_custom_params = window.google_tag_params;
-var google_remarketing_only = true;
-/* ]]> */
-</script>
-<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-</script>
-<noscript>
-<div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/870957946/?guid=ON&amp;script=0"/>
-</div>
-</noscript>
+            });
+            $.each($("img"), function (i, item) {
+                if ($(item)[0].src.length <= 0) {
+                    $(item)[0].src = utils.rootUrl + "/Content/images/noimages.png";
+                }
+            });
+        });
+    </script>

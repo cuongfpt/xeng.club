@@ -1,144 +1,120 @@
-<div class="content_left">
-    <ul id="listnew">
-        <?php if (!empty($list)): ?>
-            <?php $i = 1; ?>
-            <?php foreach ($list as $row): ?>
-                <?php if ($i <= 5): ?>
-                    <li>
-                        <div class="item_news">
-                            <div class="div_images">
-                                <a href="<?php echo base_url('bai-viet/' . $row->seoLink . '-' . $row->id) ?>"><img
-                                        src="<?php echo public_url('uploads/news/' . $row->images) ?>"></a>
-                            </div>
-                            <div class="div_content">
-                                <h2><a class="title_new" href="<?php echo base_url('bai-viet/' . $row->seoLink . '-' . $row->id) ?>"><?php echo $row->title ?></a></h2>
-                                <div class="date"><?php echo date("d/m/Y", strtotime($row->createTime)) ?></div>
-                                <div class="description">
 
-                                         <?php echo trim_text($row->description,400) ?>                              </div>
-                            </div>
+<div id="fullpage" class="fullpage-wrapper" style="height: 100%; position: relative; transform: translate3d(0px, 0px, 0px);">
+<div class="main">
+    <div class="section fp-auto-height box1 fp-section active fp-completely" id="section0" style="height: 317px;">
+        <!-- Carousel
+        ================================================== -->
+        <div class="fp-slides"><div class="fp-slidesContainer" style="width: 100%;"><div id="myCarousel" class="carousel slide fp-slide fp-table active" data-ride="carousel" style="width: 100%;"><div class="fp-tableCell" style="height: 317px;">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item">
+                    <a href="javascript:;"><img src="public/site/images/1920x350_dcdtvt.jpg" alt=""></a>
+                </div>
+                <div class="item">
+                    <a href="javascript:;"><img src="public/site/images/1920x350_cdvdd.jpg" alt=""></a>
+                </div>
+                <div class="item active">
+                    <a href="javascript:;"><img src="public/site/images/1920x350_dvtg.jpg" alt=""></a>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <!-- /.carousel -->
+        </div></div></div></div>
+        <div class="lvvip">
+            <div class="containerS">
+                <ul>
+                    <li class="right-lvvip">
+                        <div class="lvvip-img1">
+                            <img src="public/site/images/p1-card.png" alt="">
+                        </div>
+                        <div class="lvvip-img2">
+                            <img src="public/site/images/p1-dice.png" alt="">
                         </div>
                     </li>
-                <?php else : ?>
-                    <li>
-                        <div class="item_news">
-                            <div class="div_images">
-                                <a href="<?php echo base_url('bai-viet/' . $row->seoLink . '-' . $row->id) ?>">
-                                    <img src="<?php echo public_url('uploads/news/' . $row->images) ?>"></a>
-                            </div>
-                            <div class="div_content">
-                                <a class="title_new" href="<?php echo base_url('bai-viet/' . $row->seoLink . '-' . $row->id) ?>"><?php echo $row->title ?></a>
-                                <div class="date"><?php echo date("d/m/Y", strtotime($row->createTime)) ?></div>
-                                <div class="description">
-                                        <?php echo trim_text($row->description,400) ?>                                </div>
-                            </div>
-                        </div>
+                    <li class="left-lvvip">
+                        <h1>Cấp độ VIP - Vị trí khẳng định đẳng cấp</h1>
+                        <p>Với 7 cấp độ: Đá, Đồng, Bạc, Vàng, Bạch Kim, Kim Cương, Siêu VIP, người chơi sẽ được trải nghiệm những đặc quyền giá trị khác nhau từ NPH.</p>
+                        <p>Chơi game bạn yêu thích, gia tăng điểm VIP, nâng cao cấp độ và khẳng định bản thân.</p>
+                        <a href="/level-vip.html" class="btn-def">Xem thêm</a>
                     </li>
-                <?php endif ?>
-                <?php $i++ ?>
-            <?php endforeach; ?>
-        <?php endif ?>
-    </ul>
-    <?php if ($count > 5): ?>
-        <div class="pagination">
+                </ul>
+            </div>
         </div>
-    <?php endif; ?>
-    <input type="hidden" id="popup" value="<?php echo $popup?>">
-</div>
-<!-- The Modal -->
-<div id="myModal" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-        <span class="close">&times;</span>
-       <a href="<?php echo $linkpopup?>" target="_blank"> <img src="<?php echo public_url('site/images/likeshare_nhancode.png') ?>"></a>
+        <!-- end lv vip-->
     </div>
-
+    <!-- end section 1-->
+    <div class="section fp-auto-height box2 fp-section fp-table" id="section1" style="height: 317px;"><div class="fp-tableCell" style="height: 317px;">
+        <div class="benefit-vip">
+            <div class="containerS">
+                <h1>Đặc quyền VIP - Ưu đãi đa dạng, đổi thưởng thỏa thích</h1>
+                <p>Cơ hội nhận được những vật phẩm giá trị dành riêng cho khách hàng VIP, cùng các tính năng đặc biệt khác. Tích lũy điểm VIP, quà tặng trong tầm tay.</p>
+                <div class="list-benefit">
+                    <div class="col-md-3">
+                        <p><a href="/benefit-1.html"><img src="public/site/images/benefit4.png" alt=""></a></p>
+                        <p class="title-benefit">Đổi Zon</p>
+                        <a href="benefit-1.html" class="btn-def">Xem thêm</a>
+                    </div>
+                    <div class="col-md-3">
+                        <p><a href="benefit-2.html"><img src="public/site/images/benefit3.png" alt=""></a></p>
+                        <p class="title-benefit">Cửa hàng</p>
+                        <a href="benefit-2.html" class="btn-def">Xem thêm</a>
+                    </div>
+                    <div class="col-md-3">
+                        <p><a href="benefit-3.html"><img src="public/site/images/benefit2.png" alt=""></a></p>
+                        <p class="title-benefit">Quà tặng</p>
+                        <a href="benefit-3.html" class="btn-def">Xem thêm</a>
+                    </div>
+                    <div class="col-md-3">
+                        <p><a href="benefit-5.html"><img src="public/site/images/benefit.png" alt=""></a></p>
+                        <p class="title-benefit">Vay Zon</p>
+                        <a href="benefit-5.html" class="btn-def">Xem thêm</a>
+                    </div>
+                </div>
+                <!-- end benefit-->
+            </div>
+        </div>
+        <!-- end benefit vip-->
+    </div></div>
+    <!-- end section 2-->
+    <div class="section fp-auto-height box3 fp-section fp-table" id="section2" style="height: 317px;"><div class="fp-tableCell" style="height: 317px;">
+        <div class="topvip">
+            <div class="containerS">
+                <div class="col-md-7">
+                    <div class="box3-img">
+                        <div class="box3-img1">
+                            <img src="public/site/images/p2-coin.png" alt="">
+                        </div>
+                        <div class="box3-img2">
+                            <img src="public/site/images/p2-cup.png" alt="">
+                        </div>
+                        <div class="box3-img3">
+                            <img src="public/site/images/p2-girl.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <h1>TOP VIP - Nơi đỉnh cao hội tụ </h1>
+                    <p>+<span class="count">100</span> game thủ đạt thứ hạng Siêu VIP</p>
+                    <p>+<span class="count">3000</span> game thủ nhận quà sinh nhật</p>
+                    <p>+<span class="count">10000</span> game thủ đổi thưởng thành công</p>
+                    <a href="/champion.html" class="btn-def">Xem thêm</a>
+                </div>
+            </div>
+        </div>
+        <!-- end topvip-->
+    </div></div>
+    <!-- end section 3-->
 </div>
-<script>
- // Get the modal
-    var modal = document.getElementById('myModal');
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-    $(document).ready(function () {
-        Pagging();
-        if($("#popup").val()=="1"){
-        popunder();
-        }
-    });
-    function Pagging() {
-        var items = $("#listnew li");
-        var numItems = items.length;
-        $("#num").html(numItems);
-        var perPage = 5;
-        // only show the first 2 (or "first per_page") items initially
-        items.slice(perPage).hide();
-        // now setup pagination
-        $(".pagination").pagination({
-            items: numItems,
-            itemsOnPage: perPage,
-            cssStyle: "",
-            onPageClick: function (pageNumber) { // this is where the magic happens
-                // someone changed page, lets hide/show trs appropriately
-                var showFrom = perPage * (pageNumber - 1);
-                var showTo = showFrom + perPage;
-
-                items.hide() // first hide everything, then show for the new page
-                    .slice(showFrom, showTo).show();
-            }
-        });
-    }
-//xu ly popup hien thi 1 lan 1 ngay theo ip
-function Set_Cookie(name, value, expires, path, domain, secure) {
-        var today = new Date();
-        today.setTime(today.getTime());
-        var expires_date = new Date(today.getTime() + (expires));
-
-        document.cookie = name + "=" + escape(value) +
-            ((expires) ? ";expires=" + expires_date.toGMTString() : "") +
-            ((path) ? ";path=" + path : "") +
-            ((domain) ? ";domain=" + domain : "") +
-            ((secure) ? ";secure" : "");
-    }
-
-    function Get_Cookie(name) {
-
-        var start = document.cookie.indexOf(name + "=");
-        var len = start + name.length + 1;
-        if ((!start) &&
-            (name != document.cookie.substring(0, name.length))) {
-            return null;
-        }
-        if (start == -1) return null;
-        var end = document.cookie.indexOf(";", len);
-        if (end == -1) end = document.cookie.length;
-        return unescape(document.cookie.substring(len, end));
-    }
-
-    function Delete_Cookie(name, path, domain) {
-        if (Get_Cookie(name)) document.cookie = name + "=" +
-            ((path) ? ";path=" + path : "") +
-            ((domain) ? ";domain=" + domain : "") +
-            ";expires=Mon, 11-November-1989 00:00:01 GMT";
-    }
-
-    function popunder() {
-
-        if (Get_Cookie('vinplay') == null) {
-            Set_Cookie('vinplay', 'vinplay Popunder', '1', '/', '', '');
-            modal.style.display = "block";
-        }
-
-    }
-</script>
+</div>

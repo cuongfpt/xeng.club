@@ -1,44 +1,7 @@
-<div class="break-crum">
-    <div class="text-crum">Người chiến thắng</div>
-
-</div>
-
-<div class="winner">
-    <div class="winner_top"></div>
-    <div class="winner-content">
-        <ul>
-            <?php for($i = 1; $i <= 12; $i++ ): ?>
-                <?php foreach($list as $row):?>
-                    <?php if($i == $row->month): ?>
-                        <li class="m<?php echo $row->month ?>">
-                            <a href="<?php echo base_url('vinh-danh/'.$row->seolink.'-'.$row->id) ?>">
-                                <div class="month-top"><span class="t<?php echo $row->month ?>"></span></div>
-                                <div class="content-month" style="cursor: pointer">
-                                    <div class="showinfo">
-                                        <p>
-                                            <img src="<?php echo public_url('uploads/victory/'.$row->avatar) ?>">
-                                        </p>
-
-                                        <p class="name-member"><?php echo $row->username ?></p>
-
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <?php endif; ?>
-                <?php endforeach; ?>
-            <?php foreach($result as $key => $value):?>
-            <?php if($i == $value): ?>
-                        <li class="m<?php echo $value?>">
-                            <a href="#">
-                                <div class="month-top"><span class="t<?php echo $value?>"></span></div>
-
-                                <div class="content-month disable" style="z-index: 1"></div>
-                            </a>
-                        </li>
-            <?php endif; ?>
-            <?php endforeach;?>
-            <?php endfor;?>
-        </ul>
+<div class="pages champion">
+    <div class="containerS">
+        <div class="list-champion">
+            <ul><li><a href="javascript:;" onclick="libChampion.ShowFormChampionMonth('01')"><img src="public/site/images/vinhdanhDefault.jpg" alt=""><span class="info-t-vipmem">Top <br>tháng 1</span></a></li><li><a href="javascript:;" onclick="libChampion.ShowFormChampionMonth('02')"><img src="public/site/images/vinhdanhDefault.jpg" alt=""><span class="info-t-vipmem">Top <br>tháng 2</span></a></li><li><a href="javascript:;" onclick="libChampion.ShowFormChampionMonth('03')"><img src="public/site/images/vinhdanhDefault.jpg" alt=""><span class="info-t-vipmem">Top <br>tháng 3</span></a></li><li><a href="javascript:;" onclick="libChampion.ShowFormChampionMonth('04')"><img src="public/site/images/vinhdanhDefault.jpg" alt=""><span class="info-t-vipmem">Top <br>tháng 4</span></a></li><li><a href="javascript:;" onclick="libChampion.ShowFormChampionMonth('05')"><img src="public/site/images/vinhdanhDefault.jpg" alt=""><span class="info-t-vipmem">Top <br>tháng 5</span></a></li><li><a href="javascript:;" onclick="libChampion.ShowFormChampionMonth('06')"><img src="public/site/images/6.jpg" alt=""><span class="info-t-vipmem">Top <br>tháng 6</span><div class="info-vipmem"><span>Henvl7979</span><img src="public/site/images/gold.png" alt="" width="40"></div></a></li><li><a href="javascript:;" onclick="libChampion.ShowFormChampionMonth('07')"><img src="public/site/images/vinhdanhDefault.jpg" alt=""><span class="info-t-vipmem">Top <br>tháng 7</span></a></li><li><a href="javascript:;" onclick="libChampion.ShowFormChampionMonth('08')"><img src="public/site/images/vinhdanhDefault.jpg" alt=""><span class="info-t-vipmem">Top <br>tháng 8</span></a></li><li><a href="javascript:;" onclick="libChampion.ShowFormChampionMonth('09')"><img src="public/site/images/vinhdanhDefault.jpg" alt=""><span class="info-t-vipmem">Top <br>tháng 9</span></a></li><li><a href="javascript:;" onclick="libChampion.ShowFormChampionMonth('10')"><img src="public/site/images/vinhdanhDefault.jpg" alt=""><span class="info-t-vipmem">Top <br>tháng 10</span></a></li><li><a href="javascript:;" onclick="libChampion.ShowFormChampionMonth('11')"><img src="public/site/images/vinhdanhDefault.jpg" alt=""><span class="info-t-vipmem">Top <br>tháng 11</span></a></li><li><a href="javascript:;" onclick="libChampion.ShowFormChampionMonth('12')"><img src="public/site/images/vinhdanhDefault.jpg" alt=""><span class="info-t-vipmem">Top <br>tháng 12</span></a></li></ul>
+        </div>
     </div>
 </div>

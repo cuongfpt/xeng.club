@@ -1,0 +1,104 @@
+﻿.nav > li.active > a {
+    text-decoration: none;
+    background: transparent;
+    border-bottom: solid 2px #02c39a;
+    color: #02c39a;
+}
+
+.right-profile .list-right-profile li p {
+    padding: 10px;
+}
+
+.menu-footer li.active a {
+    color: #02c39a;
+}
+
+.champion .list-champion li {
+    width: 90px;
+    margin-right: 4px;
+}
+
+#ui-datepicker-div {
+    z-index: 1000 !important;
+}
+
+@media (max-width: 768px) {
+    .login, .user-login, .img-login-box, .popup a.close, .menu .navbar-nav li:after {
+        display: none !important;
+    }
+
+    .menu .navbar-nav > li > a {
+        color: #fff !important;
+        border-bottom: solid 1px #20dbb4;
+    }
+    .popup a.close-mobile {
+        z-index: 1;
+    }
+}
+@media (max-height: 420px) {
+    .popup a.close-mobile {
+        background-color:rgba(0,0,0,.8);
+    }
+}
+
+.form-exchange select {
+    display: inline-block;
+    height: 40px;
+    border: solid 1px #ddd;
+    line-height: 38px;
+    padding: 0 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    margin-bottom: 7px;
+    width: 100%;
+}
+
+    .form-exchange select:focus {
+        border: solid 1px #05be96;
+    }
+
+.form-exchange .btn-reload-captcha {
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #faf9f9;
+    background-image: -webkit-linear-gradient(bottom, #612830, #733a3e);
+    background-image: linear-gradient(to top,#dcd9d9, #d6d6d6);
+    float: right;
+    position: relative;
+}
+
+    .form-exchange .btn-reload-captcha:hover:before {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+
+    .form-exchange .btn-reload-captcha:before {
+        content: ' ';
+        background: url(../images/icons.png) no-repeat no-repeat;
+        width: 28px;
+        height: 25px;
+        background-position: -35px -59px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+        -webkit-transform-origin: 12px 12px;
+        -moz-transform-origin: 12px 12px;
+        -ms-transform-origin: 12px 12px;
+        -o-transform-origin: 12px 12px;
+        transform-origin: 12px 12px;
+    }
+
+.benefit .list-info-benefit table th.row-1, .benefit .list-info-benefit table td.row-1 {
+    max-width: 220px;
+}
