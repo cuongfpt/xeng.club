@@ -42,12 +42,11 @@
                                         <select class="form-control" name="typepage">
                                             <option value="0">Tin tức</option>
                                             <option value="1">Vinh danh</option>
-                                            <option value="2">Thưởng vip</option>
+                                             <option value="2">Đặc quyền vip</option>
                                             <option value="3">Liên hệ</option>
                                             <option value="4">FAQ</option>
-                                            <option value="5">Chính sách</option>
+                                            <option value="5">Cấp độ vip</option>
                                             <option value="6">Hướng dẫn</option>
-                                            <option value="7">Vòng quay vip</option>
                                         </select>
                                     </div>
                                 </div>

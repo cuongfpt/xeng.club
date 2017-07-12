@@ -21,8 +21,21 @@ Class System extends MY_Controller
 
         if (isset($_POST['addnews'])) {
             $file_name = $_FILES['images']['name'];
+            $file_name_lvlvip = $_FILES['images1lvlvip']['name'];
+            $file_name_lvl2vip = $_FILES['images2lvlvip']['name'];
+            $file_name_benefit1 = $_FILES['images1Benefit']['name'];
+            $file_name_benefit2 = $_FILES['images2Benefit']['name'];
+            $file_name_benefit3 = $_FILES['images3Benefit']['name'];
+            $file_name_benefit4 = $_FILES['images4Benefit']['name'];
             $file_size = $_FILES['images']['size'];
             $file_tmp = $_FILES['images']['tmp_name'];
+            $file_tmp_lvlvip = $_FILES['images1lvlvip']['tmp_name'];
+            $file_tmp_lvl2vip = $_FILES['images2lvlvip']['tmp_name'];
+            $file_tmp_benefit1 = $_FILES['images1Benefit']['tmp_name'];
+            $file_tmp_benefit2  = $_FILES['images2Benefit']['tmp_name'];
+            $file_tmp_benefit3  = $_FILES['images3Benefit']['tmp_name'];
+            $file_tmp_benefit4  = $_FILES['images4Benefit']['tmp_name'];
+
             $file_ext = strtolower(end(explode('.', $_FILES['images']['name'])));
             $expensions = array("jpeg", "jpg", "png");
             if (in_array($file_ext, $expensions) === false) {
@@ -33,6 +46,12 @@ Class System extends MY_Controller
             }
             if (empty($errors) == true) {
                 move_uploaded_file($file_tmp, "public/uploads/adv/" . $file_name);
+                move_uploaded_file($file_tmp_lvlvip, "public/uploads/adv/" . $file_name_lvlvip);
+                move_uploaded_file($file_tmp_lvl2vip, "public/uploads/adv/" . $file_name_lvl2vip);
+                move_uploaded_file($file_tmp_benefit1, "public/uploads/adv/" . $file_name_benefit1);
+                move_uploaded_file($file_tmp_benefit2, "public/uploads/adv/" . $file_name_benefit2);
+                move_uploaded_file($file_tmp_benefit3, "public/uploads/adv/" . $file_name_benefit3);
+                move_uploaded_file($file_tmp_benefit4, "public/uploads/adv/" . $file_name_benefit4);
             }
             $data = array(
                 'linkface' => $this->input->post('linkface'),
@@ -51,6 +70,20 @@ Class System extends MY_Controller
 		         'sign' => $this->input->post('sign'),
                  'ispopup' => $this->input->post('ispopup'),
                  'linkpopup' => $this->input->post('linkpopup'),
+                 'TitleLevelVip' => $this->input->post('titleLevelvip'),
+                 'ContentLevelVip' => $this->input->post('contentLevelvip'),
+                 'Images1LevelVip' => $_FILES["images1lvlvip"]["name"],
+                 'Images2LevelVip' => $_FILES["images2lvlvip"]["name"],
+                 'TitleBenefit' => $this->input->post('titlebenefit'),
+                 'ContentBenefit' => $this->input->post('contentbenefit'),
+                 'Images1Benefit' =>  $_FILES["images1Benefit"]["name"],
+                 'Images2Benefit' =>  $_FILES["images2Benefit"]["name"],
+                 'Images3Benefit' =>  $_FILES["images3Benefit"]["name"],
+                 'Images4Benefit' => $_FILES["images4Benefit"]["name"],
+                 'TextImages1Benefit' => $this->input->post('title1benefit'),
+                 'TextImages2Benefit' => $this->input->post('title2benefit'),
+                 'TextImages3Benefit' => $this->input->post('title3benefit'),
+                 'TextImages4Benefit' => $this->input->post('title4benefit')
 
             );
             if ($this->system_model->create($data)) {

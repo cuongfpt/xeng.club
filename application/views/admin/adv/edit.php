@@ -44,14 +44,14 @@
 
                         <div class="form-group">
                             <div class="row">
-                                <label class="col-sm-2 control-label">Ví trí:</label>
+                                <label class="col-sm-2 control-label">Kiểu:</label>
 
                                 <div class="col-sm-3">
                                     <select class="form-control" id="position" name="position">
                                         <?php if ($info->position == 1): ?>
-                                            <option value="1" selected>Bên phải</option>
+                                            <option value="1" selected>Slider</option>
                                         <?php else: ?>
-                                            <option value="1">Bên phải</option>
+                                            <option value="1">Slider</option>
                                         <?php endif ?>
                                     </select>
                                 </div>

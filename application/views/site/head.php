@@ -15,9 +15,6 @@
     <link rel="stylesheet" type="text/css" href="<?php echo public_url("site/css/customCSS.css") ?>" /> 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="<?php echo public_url('site') ?>/js/jquery-3.2.1.min.js"></script>
-    <script src="<?php echo public_url('site') ?>/js/pager.js"></script>
-    <script src="<?php echo public_url('site') ?>/js/md5.min.js"></script>
-    <script src="<?php echo public_url('site') ?>/js/jquery-jtemplates.js"></script>
     <script src="<?php echo public_url('site') ?>/js/jquery-migrate-1.2.1.min.js"></script>
     <script src="<?php echo public_url('site') ?>/js/jquery-ui-1.8.24.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

@@ -12,15 +12,21 @@
                 <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
             </ol>
             <div class="carousel-inner" role="listbox">
-                <div class="item">
-                    <a href="javascript:;"><img src="public/site/images/1920x350_dcdtvt.jpg" alt=""></a>
-                </div>
-                <div class="item">
-                    <a href="javascript:;"><img src="public/site/images/1920x350_cdvdd.jpg" alt=""></a>
-                </div>
-                <div class="item active">
-                    <a href="javascript:;"><img src="public/site/images/1920x350_dvtg.jpg" alt=""></a>
-                </div>
+            <?php $i=1;?>
+             <?php if (!empty($list2)) { ?>
+                    <?php foreach ($list2 as $row): ?>
+                        <?php if($i==1):?>
+                        <div class="item active">
+                             <a href="javascript:;"><img src="<?php echo public_url('uploads/adv/right/' . $row->images)?>" alt=""></a>
+                        </div>
+                    <?php else:?>
+                         <div class="item">
+                             <a href="javascript:;"><img src="<?php echo public_url('uploads/adv/right/' . $row->images)?>" alt=""></a>
+                        </div>
+                    <?php endif?>
+                    <?php $i++ ?>
+                    <?php endforeach ?>
+                <?php } ?>
                 <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>

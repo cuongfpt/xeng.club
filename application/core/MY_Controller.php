@@ -176,7 +176,7 @@ Class MY_Controller extends CI_Controller
                     $str .= "</li>";
                 } else if ($category->typepage == 2) {
                     $str .= "<li>";
-                    $str .= " <a href=" . base_url('thuong-vip') . ">" . $category->catname . "</a>";
+                    $str .= " <a href=" . base_url('dac-quyen-vip') . ">" . $category->catname . "</a>";
                     $str .= "<ul>";
                     $str .= $this->get_sub_list_category($category->id, $i = 0);
                     $str .= "</ul>";
@@ -197,7 +197,7 @@ Class MY_Controller extends CI_Controller
                     $str .= "</li>";
                 } else if ($category->typepage == 5) {
                     $str .= "<li>";
-                    $str .= " <a href=" . base_url('chinh-sach') . ">" . $category->catname . "</a>";
+                    $str .= " <a href=" . base_url('cap-do-vip') . ">" . $category->catname . "</a>";
                     $str .= "<ul>";
                     $str .= $this->get_sub_list_category($category->id, $i = 0);
                     $str .= "</ul>";
@@ -231,7 +231,7 @@ Class MY_Controller extends CI_Controller
                     $str .= "</li>";
                 } else if ($category->typepage == 2) {
                     $str .= "<li>";
-                    $str .= " <a href=" . base_url('thuong-vip') . ">" . $category->catname . "</a>";
+                    $str .= " <a href=" . base_url('dac-quyen-vip') . ">" . $category->catname . "</a>";
                     $str .= "<ul>";
                     $str .= $this->get_sub_list_category_faq($category->id, $i = 0);
                     $str .= "</ul>";
@@ -252,7 +252,7 @@ Class MY_Controller extends CI_Controller
                     $str .= "</li>";
                 } else if ($category->typepage == 5) {
                     $str .= "<li>";
-                    $str .= " <a href=" . base_url('chinh-sach') . ">" . $category->catname . "</a>";
+                    $str .= " <a href=" . base_url('cap-do-vip') . ">" . $category->catname . "</a>";
                     $str .= "<ul>";
                     $str .= $this->get_sub_list_category_faq($category->id, $i = 0);
                     $str .= "</ul>";
@@ -290,7 +290,7 @@ Class MY_Controller extends CI_Controller
                     $str .= "<ul>";
                 } else if ($sub_category->typepage == 2) {
                     $str .= "<li>";
-                    $str .= " <a href=" . base_url('thuong-vip') . ">" . $sub_category->catname . "</a>";
+                    $str .= " <a href=" . base_url('dac-quyen-vip') . ">" . $sub_category->catname . "</a>";
                     $str .= "<ul>";
                 } else if ($sub_category->typepage == 3) {
                     $str .= "<li>";
@@ -302,7 +302,7 @@ Class MY_Controller extends CI_Controller
                     $str .= "<ul>";
                 } else if ($sub_category->typepage == 5) {
                     $str .= "<li>";
-                    $str .= " <a href=" . base_url('chinh-sach') . ">" . $sub_category->catname . "</a>";
+                    $str .= " <a href=" . base_url('cap-do-vip') . ">" . $sub_category->catname . "</a>";
                     $str .= "<ul>";
                 } else if ($sub_category->typepage == 6) {
                     $str .= "<li>";
@@ -322,7 +322,7 @@ Class MY_Controller extends CI_Controller
                             $str .= "<li>";
                         } else if ($sub_category->typepage == 2) {
                             $str .= "<li>";
-                            $str .= " <a href=" . base_url('thuong-vip') . ">" . $sub_category->catname . "</a>";
+                            $str .= " <a href=" . base_url('dac-quyen-vip') . ">" . $sub_category->catname . "</a>";
                             $str .= "<li>";
                         } else if ($sub_category->typepage == 3) {
                             $str .= "<li>";
@@ -334,7 +334,7 @@ Class MY_Controller extends CI_Controller
                             $str .= "<li>";
                         } else if ($sub_category->typepage == 5) {
                             $str .= "<li>";
-                            $str .= " <a href=" . base_url('chinh-sach') . ">" . $sub_category->catname . "</a>";
+                            $str .= " <a href=" . base_url('cap-do-vip') . ">" . $sub_category->catname . "</a>";
                             $str .= "<li>";
                         } else if ($sub_category->typepage == 6) {
                             $str .= "<li>";
@@ -373,7 +373,7 @@ Class MY_Controller extends CI_Controller
                     $str .= "<ul>";
                 } else if ($sub_category->typepage == 2) {
                     $str .= "<li>";
-                    $str .= " <a href=" . base_url('thuong-vip') . ">" . $sub_category->catname . "</a>";
+                    $str .= " <a href=" . base_url('dac-quyen-vip') . ">" . $sub_category->catname . "</a>";
                     $str .= "<ul>";
                 } else if ($sub_category->typepage == 3) {
                     $str .= "<li>";
@@ -385,7 +385,7 @@ Class MY_Controller extends CI_Controller
                     $str .= "<ul>";
                 } else if ($sub_category->typepage == 5) {
                     $str .= "<li>";
-                    $str .= " <a href=" . base_url('chinh-sach') . ">" . $sub_category->catname . "</a>";
+                    $str .= " <a href=" . base_url('cap-do-vip') . ">" . $sub_category->catname . "</a>";
                     $str .= "<ul>";
                 } else if ($sub_category->typepage == 6) {
                     $str .= "<li>";
@@ -405,7 +405,7 @@ Class MY_Controller extends CI_Controller
                             $str .= "<li>";
                         } else if ($sub_category->typepage == 2) {
                             $str .= "<li>";
-                            $str .= " <a href=" . base_url('thuong-vip') . ">" . $sub_category->catname . "</a>";
+                            $str .= " <a href=" . base_url('dac-quyen-vip') . ">" . $sub_category->catname . "</a>";
                             $str .= "<li>";
                         } else if ($sub_category->typepage == 3) {
                             $str .= "<li>";
@@ -417,7 +417,7 @@ Class MY_Controller extends CI_Controller
                             $str .= "<li>";
                         } else if ($sub_category->typepage == 5) {
                             $str .= "<li>";
-                            $str .= " <a href=" . base_url('chinh-sach') . ">" . $sub_category->catname . "</a>";
+                            $str .= " <a href=" . base_url('cap-do-vip') . ">" . $sub_category->catname . "</a>";
                             $str .= "<li>";
                         } else if ($sub_category->typepage == 6) {
                             $str .= "<li>";

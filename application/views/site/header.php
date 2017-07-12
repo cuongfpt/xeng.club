@@ -45,14 +45,8 @@
 
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="javascript:;" data-value="http://vip.zon.club/">Trang chủ</a></li>
-                <li><a href="javascript:;" data-value="http://vip.zon.club/profile.html" data-requiredlogin="1">Hồ sơ VIP</a></li>
-                <li><a href="javascript:;" data-value="http://vip.zon.club/level-vip.html">Cấp độ VIP</a></li>
-                <li><a href="javascript:;" data-value="http://vip.zon.club/benefit-1.html">Đặc quyền VIP</a></li>
-                <li><a href="javascript:;" data-value="http://vip.zon.club/champion.html">Vinh danh</a></li>
-                <li><a href="javascript:;" data-value="javascript:;" onclick="window.open(jsConfig.urlTinTuc, 'news')">Tin tức</a></li>
-                <li><a href="javascript:;" data-value="http://vip.zon.club/faqs.html">Hỏi đáp</a></li>
-                <li><a href="javascript:;" data-value="javascript:;" onclick="window.open(jsConfig.urlRootPortal, 'portal')">Chơi game</a></li>
+             <?php echo $menu_list ?>
+               
             </ul>
         </div>
     </div>
