@@ -61,4 +61,5 @@ $route['cap-do-vip'] = "policy";
 $route['dac-quyen-vip'] = "vip";
 $route['lien-he'] = "contact";
 $route['404_override'] = '';
+$route['ho-so-vip'] = 'profile';
 $route['translate_uri_dashes'] = FALSE;

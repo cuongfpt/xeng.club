@@ -50,10 +50,10 @@
                         </div>
                     </li>
                     <li class="left-lvvip">
-                        <h1>Cấp độ VIP - Vị trí khẳng định đẳng cấp</h1>
-                        <p>Với 7 cấp độ: Đá, Đồng, Bạc, Vàng, Bạch Kim, Kim Cương, Siêu VIP, người chơi sẽ được trải nghiệm những đặc quyền giá trị khác nhau từ NPH.</p>
-                        <p>Chơi game bạn yêu thích, gia tăng điểm VIP, nâng cao cấp độ và khẳng định bản thân.</p>
-                        <a href="/level-vip.html" class="btn-def">Xem thêm</a>
+                        <h1><?php echo $TitleLevelVip?></h1>
+                        <p><?php echo $ContentLevelVip ?></p>
+                       
+                        <a href="<?php echo base_url("/cap-do-vip")?>" class="btn-def">Xem thêm</a>
                     </li>
                 </ul>
             </div>
@@ -64,28 +64,28 @@
     <div class="section fp-auto-height box2 fp-section fp-table" id="section1" style="height: 317px;"><div class="fp-tableCell" style="height: 317px;">
         <div class="benefit-vip">
             <div class="containerS">
-                <h1>Đặc quyền VIP - Ưu đãi đa dạng, đổi thưởng thỏa thích</h1>
-                <p>Cơ hội nhận được những vật phẩm giá trị dành riêng cho khách hàng VIP, cùng các tính năng đặc biệt khác. Tích lũy điểm VIP, quà tặng trong tầm tay.</p>
+                <h1><?php echo $TitleBenefit?></h1>
+                <p><?php echo $ContentBenefit?></p>
                 <div class="list-benefit">
                     <div class="col-md-3">
-                        <p><a href="/benefit-1.html"><img src="public/site/images/benefit4.png" alt=""></a></p>
-                        <p class="title-benefit">Đổi Zon</p>
-                        <a href="benefit-1.html" class="btn-def">Xem thêm</a>
+                        <p><a href="<?php echo base_url("/dac-quyen-vip")?>"><img src="<?php echo public_url("/uploads/adv/".$Images1Benefit)?>" alt=""></a></p>
+                        <p class="title-benefit"><?php echo $TextImages1Benefit?></p>
+                        <a href="<?php echo base_url("/dac-quyen-vip")?>" class="btn-def">Xem thêm</a>
                     </div>
                     <div class="col-md-3">
-                        <p><a href="benefit-2.html"><img src="public/site/images/benefit3.png" alt=""></a></p>
-                        <p class="title-benefit">Cửa hàng</p>
-                        <a href="benefit-2.html" class="btn-def">Xem thêm</a>
+                        <p><a href="<?php echo base_url("/dac-quyen-vip")?>"><img src="<?php echo public_url("/uploads/adv/".$Images2Benefit)?>" alt=""></a></p>
+                        <p class="title-benefit"><?php echo $TextImages2Benefit?></p>
+                        <a href="<?php echo base_url("/dac-quyen-vip")?>" class="btn-def">Xem thêm</a>
                     </div>
                     <div class="col-md-3">
-                        <p><a href="benefit-3.html"><img src="public/site/images/benefit2.png" alt=""></a></p>
-                        <p class="title-benefit">Quà tặng</p>
-                        <a href="benefit-3.html" class="btn-def">Xem thêm</a>
+                        <p><a href="<?php echo base_url("/dac-quyen-vip")?>"><img src="<?php echo public_url("/uploads/adv/".$Images3Benefit)?>" alt=""></a></p>
+                        <p class="title-benefit"><?php echo $TextImages3Benefit?></p>
+                        <a href="<?php echo base_url("/dac-quyen-vip")?>" class="btn-def">Xem thêm</a>
                     </div>
                     <div class="col-md-3">
-                        <p><a href="benefit-5.html"><img src="public/site/images/benefit.png" alt=""></a></p>
-                        <p class="title-benefit">Vay Zon</p>
-                        <a href="benefit-5.html" class="btn-def">Xem thêm</a>
+                        <p><a href="<?php echo base_url("/dac-quyen-vip")?>"><img src="<?php echo public_url("/uploads/adv/".$Images4Benefit)?>" alt=""></a></p>
+                        <p class="title-benefit"><?php echo $TextImages4Benefit?></p>
+                        <a href="<?php echo base_url("/dac-quyen-vip")?>" class="btn-def">Xem thêm</a>
                     </div>
                 </div>
                 <!-- end benefit-->

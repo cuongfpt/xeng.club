@@ -1,3 +1,8 @@
+<script>
+    $(document).ready(function () {
+        libChampion.Init();
+    });
+</script>
 <div class="footer">
         <div class="menu-footer">
             <div class="containerS">

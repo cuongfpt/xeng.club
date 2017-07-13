@@ -23,7 +23,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group" style="display: none">
                             <div class="row">
                                 <label class="col-sm-2 control-label">Danh mục:</label>
                                 <div class="col-sm-3">
@@ -132,27 +132,11 @@
 <script>
 
     $(function () {
-        $.ajax({
-            type:'GET',
-            url:'<?php echo base_url("admin/faq/get_service_category_edit"); ?>',
-            data:{id:$( "#service option:selected").val(),parent_id:$("#cate").val()},
-            success:function(data){
-                $("#category").html(data);
-            }
-        });
+        
         // Replace the <textarea id="editor1"> with a CKEditor
         // instance, using default configuration.
         CKEDITOR.replace('desc');
         CKEDITOR.replace('content');
     });
-    $("#service").change(function(){
-        $.ajax({
-            type:'GET',
-            url:'<?php echo base_url("admin/faq/get_service_category"); ?>',
-            data:{id:$(this).val()},
-            success:function(data){
-                $("#category").html(data);
-            }
-        });
-    });
+    
 </script>

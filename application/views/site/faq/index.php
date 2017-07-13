@@ -1,32 +1,26 @@
-<div class="break-crum">
-    <div class="text-crum">FAQ</div>
-
-</div>
-
-<div class="news-home">
-    <div class="benefit">
-        <div class="tit-benefit">Các câu hỏi thường gặp</div>
-        <div class="bd">
-            <div class="vip">
-                <div class="content_polices">
-                    <div class="tablevip" style="color: #fff">
-                        <?php $i = 1 ?>
-                        <?php foreach ($list as $row): ?>
-                            <div class="item-faq">
-                                <div>
-                                    <p>
-                                        <strong><?php echo $i?>. Hỏi:</strong> <em><em><?php echo $row->question?></em></em>
-                                    </p>
-                                </div>
-                                <div class="answer"><strong style="color: #ff9700;">Trả lời:</strong>
-                                   <p> <?php echo $row->answer?></p>
-                                </div>
-                                <p></p>
-                            </div>
-                            <?php $i++ ?>
-                        <?php endforeach; ?>
+<div class="pages faq">
+    <div class="containerS">
+        <div class="title-sub">
+            Câu hỏi thường gặp
+        </div>
+        <div class="list-faq">
+            <ul>
+             <?php $i = 1 ?>
+             <?php foreach ($list as $row): ?>
+                <li>
+                    <a href="#q<?php echo $i?>" class="title-faq" data-toggle="collapse"><?php echo $i?>. <?php echo $row->question?>?</a>
+                    <div class="show-anwser collapse" id="q<?php echo $i?>">
+                        <?php echo $row->answer?>
                     </div>
-                </div>
+                </li>
+                 <?php $i++ ?>
+            <?php endforeach?>
+            </ul>
+            <div class="contact">
+                <p>Thông tin liên hệ</p>
+                <p>Để biết thêm thông tin và giải đáp các thắc mắc khác, vui lòng liên hệ CSKH:</p>
+                <p>- Tổng đài: 1900 6799</p>
+                <p>- Email: hotro@Zon.club</p>
             </div>
         </div>
     </div>

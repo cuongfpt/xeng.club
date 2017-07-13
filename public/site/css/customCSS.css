@@ -16,6 +16,7 @@
 .champion .list-champion li {
     width: 90px;
     margin-right: 4px;
+    float: left;
 }
 
 #ui-datepicker-div {

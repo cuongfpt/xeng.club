@@ -46,7 +46,7 @@
                                             <option value="3">Liên hệ</option>
                                             <option value="4">FAQ</option>
                                             <option value="5">Cấp độ vip</option>
-                                            <option value="6">Hướng dẫn</option>
+                                            <option value="6">Hồ sơ vip</option>
                                         </select>
                                     </div>
                                 </div>

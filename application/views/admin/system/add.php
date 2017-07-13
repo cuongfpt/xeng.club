@@ -159,7 +159,9 @@
                         <div class="row">
                             <label class="col-sm-2 control-label">Nội dung cấp độ vip:</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" name="contentLevelvip">
+                             <textarea id="contentLevelvip" name="contentLevelvip" rows="20" cols="80">
+                                </textarea>
+                                
                             </div>
                         </div>
                     </div>
@@ -287,6 +289,7 @@ $(function () {
 // instance, using default configuration.
 CKEDITOR.replace('contact');
         CKEDITOR.replace('sign');
+        CKEDITOR.replace('contentLevelvip');
 });
 function readURL(input,id) {
 if (input.files && input.files[0])

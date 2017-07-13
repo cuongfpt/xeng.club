@@ -50,7 +50,7 @@
                                             <option value="3" <?php if($info->typepage == 3){ echo "selected"; } ?>>Liên hệ</option>
                                             <option value="4" <?php if($info->typepage == 4){ echo "selected"; } ?>>FAQ</option>
                                             <option value="5" <?php if($info->typepage == 5){ echo "selected"; } ?>>Cấp độ vip</option>
-                                            <option value="6" <?php if($info->typepage == 6){ echo "selected"; } ?>>Hướng dẫn</option>
+                                            <option value="6" <?php if($info->typepage == 6){ echo "selected"; } ?>>Hồ sơ vip</option>
                                         </select>
                                     </div>
                                 </div>

@@ -106,8 +106,20 @@ Class System extends MY_Controller
         $this->data['info'] = $info;
         if (isset($_POST['addnews'])) {
             $file_name = $_FILES['images']['name'];
+             $file_name_lvlvip = $_FILES['images1lvlvip']['name'];
+            $file_name_lvl2vip = $_FILES['images2lvlvip']['name'];
+            $file_name_benefit1 = $_FILES['images1Benefit']['name'];
+            $file_name_benefit2 = $_FILES['images2Benefit']['name'];
+            $file_name_benefit3 = $_FILES['images3Benefit']['name'];
+            $file_name_benefit4 = $_FILES['images4Benefit']['name'];
             $file_size = $_FILES['images']['size'];
             $file_tmp = $_FILES['images']['tmp_name'];
+            $file_tmp_lvlvip = $_FILES['images1lvlvip']['tmp_name'];
+            $file_tmp_lvl2vip = $_FILES['images2lvlvip']['tmp_name'];
+            $file_tmp_benefit1 = $_FILES['images1Benefit']['tmp_name'];
+            $file_tmp_benefit2  = $_FILES['images2Benefit']['tmp_name'];
+            $file_tmp_benefit3  = $_FILES['images3Benefit']['tmp_name'];
+            $file_tmp_benefit4  = $_FILES['images4Benefit']['tmp_name'];
             $file_ext = strtolower(end(explode('.', $_FILES['images']['name'])));
             $expensions = array("jpeg", "jpg", "png");
             if (in_array($file_ext, $expensions) === false) {
@@ -116,7 +128,49 @@ Class System extends MY_Controller
             if ($file_size > 2097152) {
                 $this->session->set_flashdata('message', 'Kích cỡ file nên là 2 MB');
             }
-            if ($_FILES['images']['name'] != "") {
+                if ($_FILES['images']['name'] != "") {
+                        $images =  array('images' => $_FILES['images']['name']);
+                       }
+                else{
+                        $images= array('images' => $this->input->post('imagevalue'));
+                    }
+                if ($_FILES['images1lvlvip']['name'] != "") {
+                        $Images1LevelVip = array('Images1LevelVip' => $_FILES['images1lvlvip']['name']);
+                       }
+                else{
+                        $Images1LevelVip = array('Images1LevelVip' => $this->input->post('imagevaluelvlvip'));
+                       }
+                if ($_FILES['images2lvlvip']['name'] != "") {
+                        $Images2LevelVip = array('Images2LevelVip' =>  $_FILES['images2lvlvip']['name']);
+                       }
+                else{
+                          $Images2LevelVip = array('Images2LevelVip' => $this->input->post('imagevaluelvl2vip'));
+                       }
+                     
+                if ($_FILES['images1Benefit']['name'] != "") {
+                        $Images1Benefit = array('Images1Benefit' =>  $_FILES['images1Benefit']['name']);
+                       }
+                else{
+                         $Images1Benefit = array('Images1Benefit' => $this->input->post('imagevaluebenefit1'));
+                       }
+               if ($_FILES['images2Benefit']['name'] != "") {
+                        $Images2Benefit = array('Images2Benefit' => $_FILES['images2Benefit']['name']);
+                       }
+                else{
+                         $Images2Benefit = array('Images2Benefit' => $this->input->post('imagevaluebenefit2'));
+                       }
+                if ($_FILES['images3Benefit']['name'] != "") {
+                        $Images3Benefit = array('Images3Benefit' => $_FILES['images3Benefit']['name']);
+                       }
+                else{
+                         $Images3Benefit = array('Images3Benefit' => $this->input->post('imagevaluebenefit3'));
+                       }
+                if ($_FILES['images4Benefit']['name'] != "") {
+                        $Images4Benefit = array('Images4Benefit' => $_FILES['images4Benefit']['name']);
+                       }
+                else{
+                         $Images4Benefit = array('Images4Benefit' => $this->input->post('imagevaluebenefit4'));
+                    }
                 $data = array(
                     'linkface' => $this->input->post('linkface'),
                     'linkgoogle' => $this->input->post('linkgoogle'),
@@ -130,48 +184,29 @@ Class System extends MY_Controller
                     'contact' => $this->input->post('contact'),
                     'h1' => $this->input->post('txth1'),
                     'linklogin' => $this->input->post('linklogin'),
-                    'images' => $_FILES['images']['name'],
         		    'sign' => $this->input->post('sign'),
                      'ispopup' => $this->input->post('ispopup'),
-                 'linkpopup' => $this->input->post('linkpopup'),
+                     'linkpopup' => $this->input->post('linkpopup'),
+                     'TitleLevelVip' => $this->input->post('titleLevelvip'),
+                     'ContentLevelVip' => $this->input->post('contentLevelvip'),
+                     'TextImages1Benefit' => $this->input->post('title1benefit'),
+                     'TextImages2Benefit' => $this->input->post('title2benefit'),
+                     'TextImages3Benefit' => $this->input->post('title3benefit'),
+                     'TextImages4Benefit' => $this->input->post('title4benefit'),
+                     'TitleBenefit' => $this->input->post('titlebenefit'),
+                     'ContentBenefit' => $this->input->post('contentbenefit'),
                 );
+                 $data1=array_merge($data,$images, $Images1LevelVip, $Images2LevelVip,$Images1Benefit,$Images2Benefit,$Images3Benefit,$Images4Benefit);
                 move_uploaded_file($file_tmp, "public/uploads/adv/" . $file_name);
-                if ($this->system_model->update($id, $data)) {
+                if ($this->system_model->update($id, $data1)) {
                     //tạo ra nội dung thông báo
                     $this->session->set_flashdata('message', '<label class="control-label" for="inputSuccess"><i class="fa fa-check"></i> Cập nhật thành công</label>');
                     redirect(admin_url('system'));
                 } else {
                     $this->session->set_flashdata('message', 'Cập nhật không thành công');
                 }
-            }
-            else{
-                $data = array(
-                    'linkface' => $this->input->post('linkface'),
-                    'linkgoogle' => $this->input->post('linkgoogle'),
-                    'linkyoutube' => $this->input->post('linkyoutube'),
-                    'linkblog' => $this->input->post('linkblog'),
-                    'linktwiter' => $this->input->post('linktwiter'),
-                    'codeGA' => $this->input->post('codeGa'),
-                    'titlePage' => $this->input->post('titlepage'),
-                    'keyword' => $this->input->post('keyword'),
-                    'metadescription' => $this->input->post('metadesc'),
-                    'contact' => $this->input->post('contact'),
-                    'h1' => $this->input->post('txth1'),
-                    'linklogin' => $this->input->post('linklogin'),
-                    'images' => $this->input->post('imagevalue'),
- 	             'sign' => $this->input->post('sign'),
-                   'ispopup' => $this->input->post('ispopup'),
-                 'linkpopup' => $this->input->post('linkpopup'),
-                );
-
-                if ($this->system_model->update($id, $data)) {
-                    //tạo ra nội dung thông báo
-                    $this->session->set_flashdata('message', '<label class="control-label" for="inputSuccess"><i class="fa fa-check"></i> Cập nhật thành công</label>');
-                    redirect(admin_url('system'));
-                } else {
-                    $this->session->set_flashdata('message', 'Cập nhật không thành công');
-                }
-            }
+            
+            
         }
         $message = $this->session->flashdata('message');
         $this->data['message'] = $message;
