@@ -216,14 +216,14 @@ Class MY_Controller extends CI_Controller
                     $str .= "</li>";
                 } else if ($category->typepage == 5) {
                     $str .= "<li>";
-                    $str .= " <a href=" . base_url('cap-do-vip') . ">" . $category->catname . "</a>";
+                    $str .= " <a href=" . base_url('cap-do-vip') . " id='profilevip'>" . $category->catname . "</a>";
                     $str .= "<ul>";
                     $str .= $this->get_sub_list_category($category->id, $i = 0);
                     $str .= "</ul>";
                     $str .= "</li>";
                 } else if ($category->typepage == 6) {
-                    $str .= "<li>";
-                    $str .= " <a href=" . base_url("ho-so-vip") . ">" . $category->catname . "</a>";
+                    $str .= "<li id='profilevip'>";
+                    $str .= " <a href='#' >" . $category->catname . "</a>";
                     $str .= "<ul>";
                     $str .= $this->get_sub_list_category($category->id, $i = 0);
                     $str .= "</ul>";
@@ -270,8 +270,8 @@ Class MY_Controller extends CI_Controller
                     $str .= " <a href=" . base_url('cap-do-vip') . ">" . $sub_category->catname . "</a>";
                     $str .= "<ul>";
                 } else if ($sub_category->typepage == 6) {
-                    $str .= "<li>";
-                    $str .= " <a href=" . base_url("ho-so-vip") . ">" . $sub_category->catname . "</a>";
+                    $str .= "<li  id='profilevip'>";
+                    $str .= " <a href='#'>" . $sub_category->catname . "</a>";
                     $str .= "<ul>";
                 } else if ($sub_category->typepage == 0) {
                     $str .= "<li>";
@@ -302,8 +302,8 @@ Class MY_Controller extends CI_Controller
                             $str .= " <a href=" . base_url('cap-do-vip') . ">" . $sub_category->catname . "</a>";
                             $str .= "<li>";
                         } else if ($sub_category->typepage == 6) {
-                            $str .= "<li>";
-                            $str .= " <a href=" . base_url("ho-so-vip") . ">" . $sub_category->catname . "</a>";
+                            $str .= "<li id='profilevip'>";
+                            $str .= " <a href='#' >" . $sub_category->catname . "</a>";
                             $str .= "<li>";
                         } else if ($sub_category->typepage == 0) {
                             $str .= "<li>";
@@ -354,7 +354,7 @@ Class MY_Controller extends CI_Controller
                     $str .= "<ul>";
                 } else if ($sub_category->typepage == 6) {
                     $str .= "<li>";
-                    $str .= " <a href=" . base_url("ho-so-vip") . ">" . $sub_category->catname . "</a>";
+                    $str .= " <a href='#' id='profilevip'>" . $sub_category->catname . "</a>";
                     $str .= "<ul>";
                 } else if ($sub_category->typepage == 0) {
                     $str .= "<li>";
@@ -385,8 +385,8 @@ Class MY_Controller extends CI_Controller
                             $str .= " <a href=" . base_url('cap-do-vip') . ">" . $sub_category->catname . "</a>";
                             $str .= "<li>";
                         } else if ($sub_category->typepage == 6) {
-                            $str .= "<li>";
-                            $str .= " <a href=" . base_url("ho-so-vip") . ">" . $sub_category->catname . "</a>";
+                            $str .= "<li id='profilevip'>";
+                            $str .= " <a href='#'>" . $sub_category->catname . "</a>";
                             $str .= "<li>";
                         } else if ($sub_category->typepage == 0) {
                             $str .= "<li>";
@@ -440,7 +440,7 @@ Class MY_Controller extends CI_Controller
                     $str .= "<li>";
                 } else if ($sub_category->typepage == 6) {
                     $str .= "<li>";
-                    $str .= " <a href=" . base_url("ho-so-vip") . ">" . $sub_category->catname . "</a>";
+                    $str .= " <a href=" . base_url("ho-so-vip") . " id='profilevip'>" . $sub_category->catname . "</a>";
                     $str .= "<li>";
                 } else if ($sub_category->typepage == 0) {
                     $str .= "<li>";

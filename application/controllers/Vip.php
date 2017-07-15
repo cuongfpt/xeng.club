@@ -12,7 +12,7 @@ class Vip extends MY_Controller
         $listsys = $this->system_model->get_list();
         foreach($listsys as $item)
         {
-            $this->data['meta_title'] = "Đặc quyển vip";
+            $this->data['meta_title'] = "Đặc quyền vip";
             $this->data['meta_keyword'] = $item->keyword;
             $this->data['meta_description'] = $item->metaDescription;
         }

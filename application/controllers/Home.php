@@ -23,6 +23,8 @@ class Home extends MY_Controller{
         $this->data['list'] = $list;
         $count = $this->news_model->get_count_news_home();
         $this->data['count'] = $count;
+        $username = $this->session->userdata('infouser');
+        $this->data['username']= $username ;
         $this->data['temp'] = 'site/home/index';
         $this->load->view('site/main-home', $this->data);
     }
@@ -67,5 +69,36 @@ class Home extends MY_Controller{
                 );
               $this->Rate_model->update($info[0]->id,$data);
            }
+    }
+    function loginFb(){
+      $access = $this->input->post('access');
+        $datainfo = $this->get_data_curl($this->config->item('api_url').'?c=3&s=fb&at=' . $access);
+        $data = json_decode($datainfo);
+        if($data->success == true){
+            $info = json_decode(base64_decode($data->sessionKey));
+            $nickname = $info->nickname;
+            $vinTotal = $info->vinTotal;
+            $xuTotal = $info->xuTotal;
+            $mobileSecure = $info->mobileSecure;
+            $avatar = $info->avatar;
+            $this->session->set_userdata('userData', array("accessToken"=>$data->accessToken,"nickname"=>$nickname,"vin"=>$vinTotal,"mobileSecure"=>$mobileSecure,"avatar"=>$avatar,"xu"=>$xuTotal));
+            echo json_encode("0");
+        }else{
+            if($data->errorCode == "1009"){
+                echo json_encode("1");
+            }
+            if($data->errorCode == "1109"){
+                echo json_encode("2");
+            }
+            if($data->errorCode == "2001"){
+                echo json_encode("3");
+            }
+            if($data->errorCode == "1012"){
+                echo json_encode("4");
+            }
+            if($data->errorCode == "1114"){
+                echo json_encode("5");
+            }
+        }
     }
 }

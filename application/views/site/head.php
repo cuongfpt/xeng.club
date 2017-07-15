@@ -18,6 +18,6 @@
     <script src="<?php echo public_url('site') ?>/js/jquery-migrate-1.2.1.min.js"></script>
     <script src="<?php echo public_url('site') ?>/js/jquery-ui-1.8.24.min.js"></script>
  <script src="<?php echo public_url('site') ?>/js/jquery.simplePagination.js" type="text/javascript"></script>
-
-    <script src="<?php echo public_url('site') ?>/js/bootstrap.min.js"></script>
+ <script src="<?php echo public_url('site') ?>/js/jquery.simplePagination.js" type="text/javascript"></script>
+    <script src="<?php echo public_url('site') ?>/js/jquery.md5.js"></script>
     <script src="<?php echo public_url('site') ?>/js/jquery.fullPage.js"></script>

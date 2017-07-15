@@ -1,24 +1,61 @@
 <div class="header">
         <div class="containerS">
-            <div class="user-login" style="display: none;">
+           <?php if($userinfo!=null) :?> 
+            <div class="user-login">
+             <?php foreach ($userinfo as $key => $value): ?>
                 <div class="ava">
-                    <a href="javascript:;"><img src="public/site/images/noimages.png" alt=""></a>
+                    <a href="javascript:;">
+                   <?php if ($value['avatar'] == 1): ?>
+                                    <img src="<?php echo public_url('uploads/avatar/Avatar_1.png') ?>">
+                                <?php elseif ($value['avatar'] == 2): ?>
+                                    <img src="<?php echo public_url('uploads/avatar/Avatar_2.png') ?>">
+                                <?php elseif ($value['avatar'] == 3): ?>
+                                    <img src="<?php echo public_url('uploads/avatar/Avatar_3.png') ?>">
+                                <?php elseif ($value['avatar'] == 4): ?>
+                                    <img src="<?php echo public_url('uploads/avatar/Avatar_4.png') ?>">
+                                <?php elseif ($value['avatar'] == 5): ?>
+                                    <img src="<?php echo public_url('uploads/avatar/Avatar_5.png') ?>">
+                                <?php elseif ($value['avatar'] == 6): ?>
+                                    <img src="<?php echo public_url('uploads/avatar/Avatar_6.png') ?>">
+                                <?php elseif ($value['avatar'] == 7): ?>
+                                    <img src="<?php echo public_url('uploads/avatar/Avatar_7.png') ?>">
+                                <?php elseif ($value['avatar'] == 8): ?>
+                                    <img src="<?php echo public_url('uploads/avatar/Avatar_8.png') ?>">
+                                <?php elseif ($value['avatar'] == 9): ?>
+                                    <img src="<?php echo public_url('uploads/avatar/Avatar_9.png') ?>">
+                                <?php elseif ($value['avatar'] == 10): ?>
+                                    <img src="<?php echo public_url('uploads/avatar/Avatar_10.png') ?>">
+                                <?php elseif ($value['avatar'] == 11): ?>
+                                    <img src="<?php echo public_url('uploads/avatar/Avatar_11.png') ?>">
+                                <?php elseif ($value['avatar'] == 12): ?>
+                                    <img src="<?php echo public_url('uploads/avatar/Avatar_12.png') ?>">
+                                <?php else: ?>
+                                    <img src="<?php echo public_url('uploads/avatar/Avatar_1.png') ?>">
+                                <?php endif; ?>
+                    </a>
                 </div>
+                 
                 <div class="info">
-                    <p class="name"> </p>
-                    <p class="vip"> <span></span></p>
-                    <p class="barvip"><span style="width:60%"></span></p>
+                    <p class="name"><?php echo $value['nickname'] ?> (<a href="<?php echo base_url('home/logout') ?>">Thoát</a>)</p>
+                    <p class="vip"> <input type="hidden" value="<?php echo $value['vippoint'] ?>" id="hdnvip"><span></span></p>
+                    <p class="barvip"></p>
                 </div>
+                  <?php endforeach ?>
             </div>
+            <?php endif ?>
             <div class="user-login-mobile" style="display: none;">
                 <a href="javascript:;"><img src="public/site/images/noimages.png" alt=""></a>
             </div>
+            <?php if($userinfo==null): ?>
+
             <div class="login">
                 <ul>
-                    <li><a href="javascript:;" onclick="libAccount.ShowFormLogin();"><span class="glyphicon glyphicon-log-in" aria-hidden="true" onclick="libAccount.Logout();"></span> Đăng nhập</a></li>
-                    <li><a href="javascript:;" onclick="libAccount.Register()" target="_blank"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Đăng ký</a></li>
+                    <li><a href="javascript:;" onclick="ShowFormLogin();"><span class="glyphicon glyphicon-log-in" aria-hidden="true" onclick="Logout();"></span> Đăng nhập</a></li>
+                    <li><a href="javascript:;" onclick="Register()" target="_blank"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Đăng ký</a></li>
                 </ul>
+                 <input type="hidden" value="" id="hdnvip">
             </div>
+        <?php endif ?>
             <!-- end login-->
             <div class="login-mobile">
                 <a href="javascript:;" class="reg-mobile"><span class="glyphicon glyphicon-log-in" onclick="libAccount.ShowFormLogin();" aria-hidden="true"></span></a>
@@ -52,3 +89,14 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+ $("#profilevip").click(function(){
+   if($("#hdnvip").val()==""){
+    ShowFormLogin();
+   }
+   else{
+    window.location.href="<?php echo base_url("ho-so-vip")?>";
+   }
+
+ });
+</script>

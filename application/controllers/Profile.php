@@ -16,6 +16,8 @@ class Profile extends MY_Controller
             $this->data['meta_keyword'] = $item->keyword;
             $this->data['meta_description'] = $item->metaDescription;
         }
+         $username = $this->session->userdata('infouser');
+        $this->data['username']= $username ;
         $this->data['temp'] = 'site/Profile/index';
         $this->load->view('site/main', $this->data);
 
