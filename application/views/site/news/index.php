@@ -1,5 +1,5 @@
 
-<div class="break-crum">
+<!-- <div class="break-crum">
     <div class="text-crum"><?php echo $info->title ?></div>
 <div class="star">
    <?php
@@ -77,3 +77,101 @@
   js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.9";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+ -->
+ <div class="pages benefit" id="divBenefit">
+    <div class="containerS">
+        <div class="left-benefit col-md-8">
+            <div class="title-sub">
+               <?php echo $info->title ?>
+            </div>
+            <!-- end benefit mobile-->
+            <div id="divBenefitContain">
+                <div class="exchange-benefit">
+                    <?php echo $info->content ?>
+                     <?php echo $sign ?>
+                </div>
+                <?php if ($list != false): ?>
+         <div class="content_news_other">
+                 <span> Các tin khác</span>
+                   <ul>
+                       <?php $i = 1; ?>
+                       <?php foreach ($list as $row): ?>
+                           <?php if ($i <= 5): ?>
+                            <li><a href="<?php echo base_url('bai-viet/' . $row->seoLink . '-' . $row->id) ?>"><?php echo $row->title ?></a></li>
+                           <?php endif ?>
+                           <?php $i++ ?>
+                        <?php endforeach; ?>
+                    </ul>
+             </div>
+         <?php endif ?>
+            </div>
+        </div>
+        <!-- end left benefit-->
+        <div class="right-benefit col-md-4">
+            <div class="tab-right-vip">
+                <ul>
+                    <li class="active" data-value="1"><a href="javascript:;" onclick="libMenu.BindDataMenuRight(5);">Vinh danh</a></li>
+                    <li><a href="javascript:;" data-value="2">Top quà tặng</a></li>
+                </ul>
+            </div>
+            <div class="list-right-vip" id="divTopVip">
+                <ul>
+                    <li>
+                        <strong>nam3689 </strong>đổi VP thành công <span class="t-cygan">(Từ 6 VP sang 3.600 ZON)</span> <span class="t-grey"> 5 phút, 19 giây trước
+                    </span>
+                </li>
+                <li>
+                    <strong>tuanhuyen77777 </strong>đổi VP thành công <span class="t-cygan">(Từ 6 VP sang 1.800 ZON)</span> <span class="t-grey"> 6 phút, 45 giây trước</span>
+                </li>
+                <li>
+                    <strong>Locphat868 </strong>đổi VP thành công <span class="t-cygan">(Từ 68 VP sang 40.800 ZON)</span> <span class="t-grey"> 8 phút, 31 giây trước</span>
+                </li>
+                <li>
+                    <strong>taolabiu </strong>đổi VP thành công <span class="t-cygan">(Từ 11 VP sang 3.300 ZON)</span> <span class="t-grey"> 11 phút, 13 giây trước</span>
+                </li>
+                <li><strong>tit7878 </strong>đổi VP thành công <span class="t-cygan">(Từ 201 VP sang 120.600 ZON)</span> <span class="t-grey"> 16 phút, 21 giây trước</span>
+            </li>
+        </ul>
+    </div>
+    <div class="list-right-vip" id="divGift" style="display:none;">
+        <ul>
+            <li>Comming soon</li>
+        </ul>
+    </div>
+</div>
+<script>
+$(document).ready(function () {
+libMenu.BindDataMenuRight(5);
+});
+</script>
+<script>
+    $(document).ready(function () {
+        Pagging();
+    });
+    function Pagging() {
+        var items = $("#listnew li");
+        var numItems = items.length;
+        $("#num").html(numItems);
+        var perPage = 5;
+
+        // only show the first 2 (or "first per_page") items initially
+        items.slice(perPage).hide();
+        // now setup pagination
+        $(".pagination").pagination({
+            items: numItems,
+            itemsOnPage: perPage,
+
+            cssStyle: "",
+            onPageClick: function (pageNumber) { // this is where the magic happens
+                // someone changed page, lets hide/show trs appropriately
+                var showFrom = perPage * (pageNumber - 1);
+                var showTo = showFrom + perPage;
+
+                items.hide() // first hide everything, then show for the new page
+                    .slice(showFrom, showTo).show();
+            }
+        });
+    }
+</script>
+</div>
+</div>
