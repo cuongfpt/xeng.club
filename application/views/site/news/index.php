@@ -83,6 +83,23 @@
         <div class="left-benefit col-md-8">
             <div class="title-sub">
                <?php echo $info->title ?>
+               <div class="star">
+               <?php
+                      if($info_rate!=null){
+                         for($i = 1; $i <= 5; $i++) {
+                             if($i <= $info_rate[0]->rating) {
+                              ?>
+                             <span class="star_rated" onclick="ratestar(<?php echo $info_rate[0]->news_id; ?>, <?php echo $i; ?>)"><img src="<?php echo public_url('site') ?>/images/rate-btn2-hover.png"></span>
+                                 <?php }  else {  ?>
+                             <span  onclick="ratestar(<?php echo $info->id ?>,<?php echo $i; ?>)"><img src="<?php echo public_url('site') ?>/images/rate-btn2.png"></span>
+                               <?php  }
+                         }
+                      }
+                      else {  for($i = 1; $i <= 5; $i++) { ?>
+                         <span  onclick="ratestar(<?php echo $info->id ?>,<?php echo $i; ?>)"><img src="<?php echo public_url('site') ?>/images/rate-btn2.png"></span>
+                      <?php } }?>
+                     <span style="float: left;color: #fff"> <?php echo $result_rate ?></span>
+                </div>
             </div>
             <!-- end benefit mobile-->
             <div id="divBenefitContain">
@@ -173,5 +190,33 @@ libMenu.BindDataMenuRight(5);
         });
     }
 </script>
+ <script type="text/javascript">
+  $("document").ready(function(){
+    var url      = window.location.href; 
+    $(".fb-like").attr("data-href",url);
+  });
+            function ratestar($id,$rate){
+                $.ajax({
+                    type: 'POST',
+                    url: '<?php echo base_url("Home/updateRate")?>',
+                    data:{'id':$id,'rate':$rate},
+                    success: function(data) { 
+                       location.reload();
+                    }
+                });
+            }
+        </script>
+
+<script async src="//static.addtoany.com/menu/page.js"></script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.9";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 </div>
 </div>

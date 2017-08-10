@@ -99,35 +99,35 @@
                                                         <span class="vip-stone">Đá</span>
                                                     </td>
                                                     <td>
-                                                        <span class="t-vp">0 <img src="public/site/images/favicon.png" alt="" width="18"> </span>
+                                                        <span class="t-vp">0  </span>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
                                                         <span class="vip-bronze">Đồng</span></td>
                                                         <td>
-                                                            <span class="t-vp">300 <img src="public/site/images/favicon.png" alt="" width="18"> </span></td>
+                                                            <span class="t-vp">300  </span></td>
                                                         </tr>
                                                         <tr>
                                                             <td>
                                                                 <span class="vip-silver">Bạc</span></td>
-                                                                <td><span class="t-vp">600 <img src="public/site/images/favicon.png" alt="" width="18"> </span></td>
+                                                                <td><span class="t-vp">600  </span></td>
                                                             </tr>
                                                             <tr>
                                                                 <td><span class="vip-gold">Vàng</span></td>
-                                                                <td><span class="t-vp">800 <img src="public/site/images/favicon.png" alt="" width="18"> </span></td>
+                                                                <td><span class="t-vp">800  </span></td>
                                                             </tr>
                                                             <tr>
                                                                 <td><span class="vip-diamond">Bạch kim</span></td>
-                                                                <td><span class="t-vp">1.000 <img src="public/site/images/favicon.png" alt="" width="18"> </span></td>
+                                                                <td><span class="t-vp">1.000  </span></td>
                                                             </tr>
                                                             <tr>
                                                                 <td><span class="vip-platinum">Kim cương</span></td>
-                                                                <td><span class="t-vp">1.400 <img src="public/site/images/favicon.png" alt="" width="18"> </span></td>
+                                                                <td><span class="t-vp">1.400  </span></td>
                                                             </tr>
                                                             <tr>
                                                                 <td><span class="vip-super">Siêu VIP</span></td>
-                                                                <td><span class="t-vp">1.400 <img src="public/site/images/favicon.png" alt="" width="18"> </span></td>
+                                                                <td><span class="t-vp">1.400  </span></td>
                                                             </tr></tbody>
                                                         </table>
                                                     </div>

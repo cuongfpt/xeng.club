@@ -8,7 +8,7 @@ class Home extends MY_Controller{
         parent::__construct();
         $this->load->model('news_model');
         $this->load->model('system_model');
-         $this->load->model('Rate_model');
+        
     }
     public function index()
     {
@@ -47,29 +47,7 @@ class Home extends MY_Controller{
         }
         redirect(base_url(''));
     }
-    function updateRate(){
-             $therate = $_POST['rate'];
-             $thepost = $_POST['id'];
-             $count = $this->Rate_model->get_count_rate_by_newsID($thepost);
-             if($count==0){
-                 $data = array(
-                    'news_id' => $thepost,
-                    'rating' => $therate,
-                    'count'=>1,
-                );
-                $this->Rate_model->create($data);
-           }
-           else{
-             $info = $this->Rate_model->get_info_rate_by_newsID($thepost);
-             $count1=(int)$info[0]->count+1;
-             $data = array(
-                    'news_id' => $thepost,
-                    'rating' => $therate,
-                    'count' => $count1,
-                );
-              $this->Rate_model->update($info[0]->id,$data);
-           }
-    }
+   
     function loginFb(){
       $access = $this->input->post('access');
         $datainfo = $this->get_data_curl($this->config->item('api_url').'?c=3&s=fb&at=' . $access);
@@ -100,5 +78,28 @@ class Home extends MY_Controller{
                 echo json_encode("5");
             }
         }
+    }
+    function updateRate(){
+             $therate = $_POST['rate'];
+             $thepost = $_POST['id'];
+             $count = $this->Rate_model->get_count_rate_by_newsID($thepost);
+             if($count==0){
+                 $data = array(
+                    'news_id' => $thepost,
+                    'rating' => $therate,
+                    'count'=>1,
+                );
+                $this->Rate_model->create($data);
+           }
+           else{
+             $info = $this->Rate_model->get_info_rate_by_newsID($thepost);
+             $count1=(int)$info[0]->count+1;
+             $data = array(
+                    'news_id' => $thepost,
+                    'rating' => $therate,
+                    'count' => $count1,
+                );
+              $this->Rate_model->update($info[0]->id,$data);
+           }
     }
 }

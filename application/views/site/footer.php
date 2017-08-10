@@ -73,7 +73,7 @@
             //Menu footer
             $("#navbar .navbar-nav li,.footer .containerS li").removeClass("active");
             $.each($("#navbar .navbar-nav a,.footer .containerS li a"), function (i, item) {
-                if (location.href.toLocaleLowerCase() == $(this).data("value").toLocaleLowerCase()) {
+                if (location.href.toLocaleLowerCase() == $(this).data("value")) {
                     $(this).parent().addClass("active");
                 }
             });
