@@ -14,10 +14,10 @@
         <div class="containerS">
             <div class="left-menu-footer">
                 <p><a href="javascript:;" onclick="window.open(jsConfig.urlDieuKhoan, 'portal')">Điều khoản</a> | <a href="javascript:;" onclick="window.open(jsConfig.urlHoTro, 'portal')">Hỗ trợ</a> | <a href="javascript:;" onclick="window.open(jsConfig.urlFanpage, 'fanpage')">Fanpage</a></p>
-                <p>Tổng đài: <a href="tel:+8419006799">1900 6799</a> - Email: <a href="hotro@zon.club">hotro@zon.club</a> </p>
+                <p>Tổng đài: <a href="tel:+8419006799">1900 6799</a> - Email: <a href="hotro@xeng.club">hotro@xeng.club</a> </p>
             </div>
             <div class="right-menu-footer">
-                <p>©2017 Bản quyền thuộc <a href="javascript:;" onclick="window.open(jsConfig.urlRootPortal, 'portal')">Zon.club</a></p>
+                <p>©2017 Bản quyền thuộc <a href="javascript:;" onclick="window.open(jsConfig.urlRootPortal, 'portal')">xeng.club</a></p>
                 <p>Game dành cho 13+</p>
             </div>
         </div>
